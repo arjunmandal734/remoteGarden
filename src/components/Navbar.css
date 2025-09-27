@@ -1,0 +1,25 @@
+.nav_bar {
+  width: 100%;
+  background: rgb(0, 50, 134);
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 2px 6px 11px 1px #7c9bcb;
+}
+
+.menue {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.nav_item {
+  margin: 0px 30px;
+  cursor: pointer;
+}
