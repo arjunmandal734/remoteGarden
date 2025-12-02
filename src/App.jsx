@@ -5,11 +5,14 @@ import PricingPage from "./Pages/PricingPage";
 import DashboardPage from "./Pages/DashboardPage";
 import MyGardenPage from "./Pages/MyGardenPage";
 import NotFound from "./Pages/NotFoundPage";
-import PlantStore from "./PageParts/PlantStore";
+import PlantStore from "./UI/PlantStore";
 //import CheckoutSection from "./components/ProductDetailsAndCkeckout/CheckoutSection"
 import ProductDetails from "./PageParts/ProductDetails";
 import GardenPlantDashboard from "./PageParts/GardenPlantDashboard";
 import GardenPlantDashboardPage from "./Pages/GardenPlantDashboardPage";
+
+
+
 
 function App() {
   return (
@@ -45,6 +48,7 @@ function App() {
                 />
               }
             />
+            <Route path="/error" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

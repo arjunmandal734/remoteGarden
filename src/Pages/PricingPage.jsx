@@ -1,10 +1,5 @@
-import Pricing from "../PageParts/Pricing";
-import { PricingProvider } from "../context/PricingContext";
+import Pricing from "../UI/Pricing";
 
 export default function PricingPage() {
-  return (
-    <PricingProvider>
-      <Pricing />
-    </PricingProvider>
-  );
+  return <Pricing />;
 }

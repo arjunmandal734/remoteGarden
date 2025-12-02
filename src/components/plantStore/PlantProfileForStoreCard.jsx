@@ -1,12 +1,13 @@
 export default function PlantProfileForStoreCard({
   imageUrl,
   name,
-  scientificName,
+  botanicalName,
   price,
   tags,
   available,
-  growthType,
+  careLevel,
   growthDuration,
+  co2Offset
 }) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden w-full hover:shadow-lg transition">
@@ -21,12 +22,12 @@ export default function PlantProfileForStoreCard({
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="px-4 pb-4 pt-1">
         {/* Plant Name */}
         <h3 className="text-lg font-bold text-green-700 truncate">{name}</h3>
 
         {/* Scientific Name */}
-        <p className="text-xs italic text-gray-500 mb-2">{scientificName}</p>
+        <p className="text-xs italic text-gray-500 mb-2">{botanicalName}</p>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 text-xs text-white mb-3">
@@ -38,9 +39,10 @@ export default function PlantProfileForStoreCard({
         </div>
 
         {/* Growth Info */}
-        <div className="text-xs text-gray-600 mb-3">
-          <p>🌿 Growth Type: <span className="font-medium">{growthType}</span></p>
-          <p>⏱️ Avg Duration: <span className="font-medium">{growthDuration}</span></p>
+        <div className="text-xs text-gray-600 mb-1">
+          <p>🌿Care Level: <span className="font-medium">{careLevel}</span></p>
+          <p>⏱️Growth Duration: <span className="font-medium">{growthDuration}months</span></p>
+           <p className="text-center text-green-500 mt-1">Removes {co2Offset} kg/month CO₂💨</p>
         </div>
 
         {/* Buy Button */}
@@ -52,7 +54,7 @@ export default function PlantProfileForStoreCard({
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
           }`}
         >
-          {available ? `Buy for ₹${price}` : "Out of Stock"}
+          {available ? `Add to Garden – ₹${price}` : "Out of Stock"}
         </button>
       </div>
     </div>

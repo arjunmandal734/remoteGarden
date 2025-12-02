@@ -7,9 +7,9 @@ export default function ProductDetails({ plant }) {
   const totalPrice = plant.price;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-green-100 to-green-200 px-6 py-10 mt-7 animate-fade-in">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-green-100 to-green-200 px-6 py-15 mt-7 animate-fade-in">
       {/* Title */}
-      <h1 className="text-3xl font-bold text-green-800 text-center mb-10 animate-slide-down">
+      <h1 className="text-3xl font-bold text-green-800 text-center mb-5 animate-slide-down">
         🌱Let Your Plant Take Root
       </h1>
 

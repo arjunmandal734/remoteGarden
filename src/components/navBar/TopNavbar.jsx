@@ -17,25 +17,60 @@ export default function TopNavbar() {
       <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-12">
         <NavLink
           to="/"
-          className="relative text-green-700 font-semibold tracking-wide transition duration-300 hover:text-green-800 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
+          className={({ isActive }) =>
+            `relative text-green-700 font-semibold tracking-wide transition duration-300
+            hover:text-green-800 after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300
+            ${
+              isActive
+                ? "after:w-full after:left-0 text-green-800"
+                : "after:w-0 after:left-1/2 hover:after:w-full hover:after:left-0"
+            }`
+          }
         >
           Dashboard
         </NavLink>
+
         <NavLink
           to="/garden"
-          className="relative text-green-700 font-semibold tracking-wide transition duration-300 hover:text-green-800 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
+          className={({ isActive }) =>
+            `relative text-green-700 font-semibold tracking-wide transition duration-300
+            hover:text-green-800 after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300
+            ${
+              isActive
+                ? "after:w-full after:left-0 text-green-800"
+                : "after:w-0 after:left-1/2 hover:after:w-full hover:after:left-0"
+            }`
+          }
         >
           My Garden
         </NavLink>
+
         <NavLink
           to="/pricing"
-          className="relative text-green-700 font-semibold tracking-wide transition duration-300 hover:text-green-800 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
+          className={({ isActive }) =>
+            `relative text-green-700 font-semibold tracking-wide transition duration-300
+            hover:text-green-800 after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300
+            ${
+              isActive
+                ? "after:w-full after:left-0 text-green-800"
+                : "after:w-0 after:left-1/2 hover:after:w-full hover:after:left-0"
+            }`
+          }
         >
           Pricing
         </NavLink>
+
         <NavLink
           to="/plantstore"
-          className="relative text-green-700 font-semibold tracking-wide transition duration-300 hover:text-green-800 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
+          className={({ isActive }) =>
+            `relative text-green-700 font-semibold tracking-wide transition duration-300
+            hover:text-green-800 after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300
+            ${
+              isActive
+                ? "after:w-full after:left-0 text-green-800"
+                : "after:w-0 after:left-1/2 hover:after:w-full hover:after:left-0"
+            }`
+          }
         >
           Plant Store
         </NavLink>
